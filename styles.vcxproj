@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D83C36A-DC6F-4260-A46B-3691C9F1F7A0}</ProjectGuid>
+    <RootNamespace>AYYWARECSGO</RootNamespace>
+    <ProjectName>Badcache Beta</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Angle.h" />
+    <ClInclude Include="AnimationFix.h" />
+    <ClInclude Include="Anti Leak.h" />
+    <ClInclude Include="AntiAim.h" />
+    <ClInclude Include="Autowall.h" />
+    <ClInclude Include="BaseClient.h" />
+    <ClInclude Include="bspflags.h" />
+    <ClInclude Include="Chams.h" />
+    <ClInclude Include="ClientRecvProps.h" />
+    <ClInclude Include="CommonIncludes.h" />
+    <ClInclude Include="Controls.h" />
+    <ClInclude Include="CRC32.h" />
+    <ClInclude Include="Crosshair.h" />
+    <ClInclude Include="CVar.h" />
+    <ClInclude Include="Datamanager.h" />
+    <ClInclude Include="debug_protection.h" />
+    <ClInclude Include="DLLMain.h" />
+    <ClInclude Include="Dumping.h" />
+    <ClInclude Include="EngineClient.h" />
+    <ClInclude Include="EnginePrediction.h" />
+    <ClInclude Include="Entities.h" />
+    <ClInclude Include="ESP.h" />
+    <ClInclude Include="GameMovement.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="GlowManager.h" />
+    <ClInclude Include="GlowObjectManager.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="Hacks.h" />
+    <ClInclude Include="Hitmarkers.h" />
+    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="IClientMode.h" />
+    <ClInclude Include="IGameEvents.h" />
+    <ClInclude Include="CInput.h" />
+    <ClInclude Include="INJ\ReflectiveDLLInjection.h" />
+    <ClInclude Include="INJ\ReflectiveLoader.h" />
+    <ClInclude Include="Interfaces.h" />
+    <ClInclude Include="InterfaceStruct.h" />
+    <ClInclude Include="Interpfix.h" />
+    <ClInclude Include="LagFix.h" />
+    <ClInclude Include="LegitBot.h" />
+    <ClInclude Include="mac.h" />
+    <ClInclude Include="Materials.h" />
+    <ClInclude Include="MathFunctions.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MetaInfo.h" />
+    <ClInclude Include="MiscClasses.h" />
+    <ClInclude Include="MiscDefinitions.h" />
+    <ClInclude Include="MiscHacks.h" />
+    <ClInclude Include="MoveHelper.h" />
+    <ClInclude Include="NetVars.h" />
+    <ClInclude Include="NightMode.h" />
+    <ClInclude Include="Nosmoke.h" />
+    <ClInclude Include="NoSpread.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="PlayerList.h" />
+    <ClInclude Include="Prediction.h" />
+    <ClInclude Include="QAngle.hpp" />
+    <ClInclude Include="RageBot.h" />
+    <ClInclude Include="RenderManager.h" />
+    <ClInclude Include="Resolver.h" />
+    <ClInclude Include="SDK.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SkinChanger.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Surface.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="UTIL Functions.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vaults.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="Vector4D.h" />
+    <ClInclude Include="VFTableHook.h" />
+    <ClInclude Include="viewsetup.h" />
+    <ClInclude Include="Visuals.h" />
+    <ClInclude Include="XorStr.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AntiAim.cpp" />
+    <ClCompile Include="Autowall.cpp" />
+    <ClCompile Include="Chams.cpp" />
+    <ClCompile Include="Controls.cpp" />
+    <ClCompile Include="CRC32.cpp" />
+    <ClCompile Include="Crosshair.cpp" />
+    <ClCompile Include="Datamanager.cpp" />
+    <ClCompile Include="debug_protection.cpp" />
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="Dumping.cpp" />
+    <ClCompile Include="EnginePrediction.cpp" />
+    <ClCompile Include="Entities.cpp" />
+    <ClCompile Include="ESP.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Hacks.cpp" />
+    <ClCompile Include="Hitmarkers.cpp" />
+    <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="INJ\ReflectiveLoader.cpp" />
+    <ClCompile Include="Interfaces.cpp" />
+    <ClCompile Include="Interpfix.cpp" />
+    <ClCompile Include="LegitBot.cpp" />
+    <ClCompile Include="mac.cpp" />
+    <ClCompile Include="MathFunctions.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MetaInfo.cpp" />
+    <ClCompile Include="MiscHacks.cpp" />
+    <ClCompile Include="NetVarManager.cpp" />
+    <ClCompile Include="NetVars.cpp" />
+    <ClCompile Include="NightMode.cpp" />
+    <ClCompile Include="Nosmoke.cpp" />
+    <ClCompile Include="Offsets.cpp" />
+    <ClCompile Include="RageBot.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
+    <ClCompile Include="Resolver.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SkinChanger.cpp" />
+    <ClCompile Include="SpoofConVar.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="UTIL Functions.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Vaults.cpp" />
+    <ClCompile Include="Vector4D.cpp" />
+    <ClCompile Include="Visual.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
